@@ -1,1 +1,2 @@
-# asti_company_mail
+# simple_api
+Simple rest api
