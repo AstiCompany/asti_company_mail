@@ -6,14 +6,26 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "core-js": "^0.9.6",
+    "express": "^4.13.3",
+    "nodemailer": "^6.4.2",
     "object-assign": "4.0.1",
-    "qs": "^5.2.0",
-    "express": "^4.13.3"
+    "qs": "^5.2.0"
   },
   "scripts": {
     "start": "supervisor server.js"
   },
   "engines": {
     "node": "8.9.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AstiCompany/asti_company_mail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AstiCompany/asti_company_mail/issues"
+  },
+  "homepage": "https://github.com/AstiCompany/asti_company_mail#readme"
 }
