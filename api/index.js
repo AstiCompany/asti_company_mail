@@ -13,13 +13,13 @@ let transporter = nodemailer.createTransport({
 
 
 router.get('/mail', function (req, res, next) {
-    let result = await transporter.sendMail({
-        from: '"Node js" <asti.company1@gmail.com>',
-        to: "sancej176@mail.ru",
-        subject: "Message from Node js",
-        text: "This message was sent from Node js server.",
-        html: "This <i>message</i> was sent from <strong>Node js</strong> server."
-    });
+    // let result = await transporter.sendMail({
+    //     from: '"Node js" <asti.company1@gmail.com>',
+    //     to: "sancej176@mail.ru",
+    //     subject: "Message from Node js",
+    //     text: "This message was sent from Node js server.",
+    //     html: "This <i>message</i> was sent from <strong>Node js</strong> server."
+    // });
     res.json(1);
 });
   
