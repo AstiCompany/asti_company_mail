@@ -22,6 +22,7 @@ router.post('/mail', function (req, res, next) {
         text: "This message was sent from Node js server.",
         html: "This <i>message</i> was sent from <strong>Node js</strong> server."
     });
+    res.json(1);
 });
   
 
