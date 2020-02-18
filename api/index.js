@@ -1,6 +1,4 @@
 var router = require('express').Router();
-var mocks = require('./mock');
-var assign = require('object-assign');
 const nodemailer = require('nodemailer');
     
 let testEmailAccount = await nodemailer.createTestAccount();
@@ -14,7 +12,7 @@ let transporter = nodemailer.createTransport({
 });
 
 
-router.post('/mail', function (req, res, next) {
+router.get('/mail', function (req, res, next) {
     let result = await transporter.sendMail({
         from: '"Node js" <asti.company1@gmail.com>',
         to: "sancej176@mail.ru",
