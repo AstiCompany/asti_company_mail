@@ -1,15 +1,15 @@
 var router = require('express').Router();
 const nodemailer = require('nodemailer');
     
-let testEmailAccount = await nodemailer.createTestAccount();
+// let testEmailAccount = await nodemailer.createTestAccount();
 
-let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'asti.company1@gmail.com',
-        pass: 'asti2015074'
-    }
-});
+// let transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: 'asti.company1@gmail.com',
+//         pass: 'asti2015074'
+//     }
+// });
 
 
 router.get('/mail', function (req, res, next) {
