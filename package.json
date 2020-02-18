@@ -12,20 +12,9 @@
     "qs": "^5.2.0"
   },
   "scripts": {
-    "start": "supervisor server.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": "8.9.3"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AstiCompany/asti_company_mail.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AstiCompany/asti_company_mail/issues"
-  },
-  "homepage": "https://github.com/AstiCompany/asti_company_mail#readme"
+  }
 }
