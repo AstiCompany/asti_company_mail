@@ -12,7 +12,7 @@
     "qs": "^5.2.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "supervisor server.js"
   },
   "engines": {
     "node": "8.9.3"
