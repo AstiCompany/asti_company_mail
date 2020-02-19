@@ -1,26 +1,26 @@
 var router = require('express').Router();
-// const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
     
-// let testEmailAccount = await nodemailer.createTestAccount();
+let testEmailAccount = nodemailer.createTestAccount();
 
-// let transporter = nodemailer.createTransport({
-//     service: 'gmail',
-//     auth: {
-//         user: 'asti.company1@gmail.com',
-//         pass: 'asti2015074'
-//     }
-// });
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'asti.company1@gmail.com',
+        pass: 'asti2015074'
+    }
+});
 
 
-router.get('/mail', function (req, res, next) {
-    // let result = await transporter.sendMail({
-    //     from: '"Node js" <asti.company1@gmail.com>',
-    //     to: "sancej176@mail.ru",
-    //     subject: "Message from Node js",
-    //     text: "This message was sent from Node js server.",
-    //     html: "This <i>message</i> was sent from <strong>Node js</strong> server."
-    // });
-    res.json(1);
+router.post('/mail', function (req, res, next) {
+    var body = req.body;
+    let result = transporter.sendMail({
+        from: '"Форма сайта" <asti.company1@gmail.com>',
+        to: "sam-web.by@mail.ru",
+        subject: "Асти компани",
+        text: "This message was sent from Node js server.",
+        html: "Новый пользователь: " + body.name + ", номер телефона: " + body.phone
+    });
 });
   
 
