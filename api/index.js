@@ -13,6 +13,7 @@ let transporter = nodemailer.createTransport({
 
 
 router.post('/mail', function (req, res, next) {
+    res.json(1);
     var body = req.body;
     let result = transporter.sendMail({
         from: '"Форма сайта" <asti.company1@gmail.com>',
