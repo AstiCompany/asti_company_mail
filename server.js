@@ -6,14 +6,16 @@ var port = 3001;
 
 var app = express();
 
+app.use(cors());
+app.options('*', cors());
 app.use(bodyParser.json());
 app.use('/api', api)
 
-app.listen(port, 'localhost', function (err) {
+app.listen(process.env.PORT || port, function (err) {
     if (err) {
         console.log(err);
         return;
     }
-
-    console.log('Listening at http://localhost:' + port);
+    var port = server.address().port;
+    console.log("App now running on port", port);
 });
