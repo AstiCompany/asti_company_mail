@@ -2,7 +2,6 @@ var path = require('path');
 var express = require('express');
 var api = require('./api');
 var bodyParser = require('body-parser');
-var port = 3001;
 var cors = require('cors');
 
 var app = express();
@@ -12,7 +11,7 @@ app.options('*', cors());
 app.use(bodyParser.json());
 app.use('/api', api)
 
-app.listen(process.env.PORT || port, function (err) {
+var server = app.listen(process.env.PORT || 3001, function (err) {
     if (err) {
         console.log(err);
         return;
