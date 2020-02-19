@@ -21,6 +21,7 @@ router.post('/mail', function (req, res, next) {
         text: "This message was sent from Node js server.",
         html: "Новый пользователь: " + body.name + ", номер телефона: " + body.phone
     });
+    res.end();
 });
   
 
