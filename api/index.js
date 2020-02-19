@@ -12,7 +12,7 @@ const nodemailer = require('nodemailer');
 // });
 
 
-router.post('/mail', function (req, res, next) {
+router.get('/mail', function (req, res, next) {
     res.json(1);
     // var body = req.body;
     // let result = transporter.sendMail({
