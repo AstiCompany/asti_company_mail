@@ -12,7 +12,7 @@ let transporter = nodemailer.createTransport({
 });
 
 
-router.get('/mail', function (req, res, next) {
+router.post('/mail', function (req, res, next) {
     var body = req.body;
     let result = transporter.sendMail({
         from: '"Форма сайта" <asti.company1@gmail.com>',
