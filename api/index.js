@@ -19,7 +19,11 @@ router.post('/mail', function (req, res, next) {
         to: "sam-web.by@mail.ru",
         subject: "Асти компани",
         text: "This message was sent from Node js server.",
-        html: "Новый пользователь: " + body.name + ", номер телефона: " + body.phone + ", email: " + body.email + ", тема вопроса: " + body.theme
+        html: "Новый пользователь: " + body.name + ", номер телефона: " + body.phone + ", email: " + body.email + ", текст вопроса: " + body.message
+    }, function (err, data) {
+        if (err) {
+            console.log(err);
+        }
     });
     res.end();
 });
